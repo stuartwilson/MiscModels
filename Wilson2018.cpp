@@ -223,7 +223,15 @@ int main(int argc, char **argv){
     int interval = 0;
     double fa = 0.;
 
+    int gens25 = nGenerations/4;
+    int gens50 = gens25*2;
+    int gens75 = gens25*3;
+
     for (int t=0;t<nGenerations;t++){
+
+        if(t==gens25) cout<<endl<<" 25% "<<endl;
+        if(t==gens50) cout<<endl<<" 50% "<<endl;
+        if(t==gens75) cout<<endl<<" 75% "<<endl;
 
         if (fa == 1.0){
             cout<<"."<<flush;
